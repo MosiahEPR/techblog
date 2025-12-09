@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrones Arquitectónicos Modernos - Artículo Experto</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e293b, #0f172a);
+            padding: 30px;
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #34d399;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #94a3b8;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #34d399;
+            margin-top: 40px;
+        }
+
+        .highlight {
+            background: #1e293b;
+            padding: 15px 20px;
+            border-left: 4px solid #34d399;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        code {
+            font-family: "JetBrains Mono", monospace;
+            background: #1e293b;
+            padding: 3px 6px;
+            border-radius: 5px;
+            color: #34d399;
+        }
+
+        .footer-link {
+            display: block;
+            margin-top: 50px;
+            text-decoration: none;
+            color: #34d399;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Patrones Arquitectónicos Modernos</h1>
+    <p>Análisis profesional sobre Clean Architecture, Arquitectura Hexagonal y CQRS.</p>
+</header>
+
+<div class="content">
+
+    <h2>1. Definición</h2>
+    <p>
+        Un <strong>patrón arquitectónico</strong> es una solución reutilizable a un problema recurrente en el diseño
+        de software. A diferencia de un estilo arquitectónico (más estructural), los patrones definen reglas,
+        principios y relaciones entre capas o componentes.
+    </p>
+
+    <h2>2. Clean Architecture</h2>
+    <p>
+        Propuesto por Robert C. Martin (Uncle Bob), busca lograr independencia de:
+        frameworks, bases de datos, UI y detalles operativos.
+    </p>
+
+    <h3>Capas</h3>
+    <ul>
+        <li><strong>Entities:</strong> Lógica empresarial pura</li>
+        <li><strong>Use Cases:</strong> Casos de uso del sistema</li>
+        <li><strong>Interface Adapters:</strong> Presentadores, controladores, mapeadores</li>
+        <li><strong>Frameworks & Drivers:</strong> Web, DB, UI, etc.</li>
+    </ul>
+
+    <h3>Propósito</h3>
+    <div class="highlight">
+        Asegurar independencia y permitir que el sistema sea altamente mantenible y extensible.
+    </div>
+
+    <h2>3. Arquitectura Hexagonal (Ports & Adapters)</h2>
+    <p>
+        Propuesta por Alistair Cockburn.  
+        Su objetivo es aislar la lógica del dominio de las dependencias externas mediante:
+        <strong>Puertos</strong> (interfaces) y <strong>Adaptadores</strong> (implementaciones).
+    </p>
+
+    <h3>Ventajas</h3>
+    <ul>
+        <li>Alta prueba unitaria</li>
+        <li>Dominio completamente independiente</li>
+        <li>Flexibilidad para reemplazar tecnologías fácilmente</li>
+    </ul>
+
+    <h3>Desventajas</h3>
+    <ul>
+        <li>Requiere experiencia alta del equipo</li>
+        <li>Estructura inicial más compleja</li>
+    </ul>
+
+    <h2>4. CQRS (Command Query Responsibility Segregation)</h2>
+    <p>
+        Divide la aplicación en dos modelos:
+        <strong>Comandos</strong> (modifican estado) y <strong>Consultas</strong> (leen información).
+    </p>
+
+    <h3>Ventajas</h3>
+    <ul>
+        <li>Rendimiento extremo en consultas</li>
+        <li>Escalabilidad independiente</li>
+        <li>Ideal para Event Sourcing</li>
+    </ul>
+
+    <h3>Desventajas</h3>
+    <ul>
+        <li>Mayor complejidad arquitectónica</li>
+        <li>Sincronización de modelos separados</li>
+    </ul>
+
+    <h2>5. Conclusión General</h2>
+
+    <div class="highlight">
+        Clean Architecture ofrece independencia;  
+        Hexagonal ofrece aislamiento del dominio;  
+        CQRS ofrece máxima optimización y escalabilidad.  
+        La elección depende del tipo de proyecto, la carga esperada y la experiencia del equipo.
+    </div>
+
+    <a href="../index.html" class="footer-link">⬅ Volver al Dashboard</a>
+
+</div>
+
+</body>
+</html>
