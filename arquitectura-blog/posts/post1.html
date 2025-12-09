@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Software - Artículo Experto</title>
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e293b, #0f172a);
+            padding: 30px;
+            border-bottom: 1px solid #334155;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1rem;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #38bdf8;
+            margin-top: 40px;
+        }
+
+        .highlight {
+            background: #1e293b;
+            padding: 15px 20px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        code {
+            font-family: "JetBrains Mono", monospace;
+            background: #1e293b;
+            padding: 3px 6px;
+            border-radius: 5px;
+            color: #38bdf8;
+        }
+
+        .footer-link {
+            display: block;
+            margin-top: 50px;
+            text-decoration: none;
+            color: #38bdf8;
+            font-weight: 600;
+            text-align: center;
+            opacity: 0.8;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Arquitectura de Software</h1>
+    <p>Un análisis profesional basado en estándares de la industria (IEEE, SEI, Fowler).</p>
+</header>
+
+<div class="content">
+
+    <h2>1. Definición Profesional</h2>
+    <p>
+        La <strong>Arquitectura de Software</strong> es la estructura fundamental de un sistema, representada por sus
+        componentes, las relaciones entre ellos y los principios que guían su diseño y evolución.
+        Esta definición está alineada con el estándar <strong>IEEE 1471</strong> y el enfoque del Software Engineering Institute (SEI).
+    </p>
+
+    <div class="highlight">
+        “La arquitectura es el conjunto de decisiones significativas sobre la organización de un sistema.” — Martin Fowler
+    </div>
+
+    <h2>2. Objetivo Principal</h2>
+    <p>
+        Su propósito es asegurar que el sistema cumpla atributos de calidad como:
+        rend miento, seguridad, escalabilidad, mantenibilidad y disponibilidad.
+        La arquitectura sirve como un mapa técnico que guía el proyecto desde su diseño hasta su operación.
+    </p>
+
+    <h2>3. Componentes Básicos</h2>
+
+    <h3>• Módulos</h3>
+    <p>
+        Son unidades lógicas del sistema que encapsulan funciones.  
+        Un buen módulo tiene:
+    </p>
+    <ul>
+        <li>Bajo acoplamiento</li>
+        <li>Alta cohesión</li>
+        <li>Interfaces bien definidas</li>
+    </ul>
+
+    <h3>• Interfaces</h3>
+    <p>
+        Definen cómo los módulos se comunican entre sí.  
+        Ejemplos: API, métodos, contratos, DTOs.
+    </p>
+
+    <h3>• Conectores</h3>
+    <p>
+        Son los mecanismos que permiten el flujo de datos entre componentes.  
+        Pueden ser:
+        <code>HTTP</code>, <code>Message Brokers</code>, <code>DLL</code>, <code>Sockets</code>.
+    </p>
+
+    <h2>4. Importancia en el Desarrollo</h2>
+
+    <h3>• Escalabilidad</h3>
+    <p>
+        Permite que el sistema maneje más usuarios y más carga sin rediseñarlo completo.
+    </p>
+
+    <h3>• Mantenibilidad</h3>
+    <p>
+        Reduce el costo y riesgo al cambiar o agregar funcionalidad.
+    </p>
+
+    <h3>• Rendimiento</h3>
+    <p>
+        Una arquitectura correcta evita cuellos de botella y optimiza los recursos.
+    </p>
+
+    <h2>5. Rol del Arquitecto de Software</h2>
+    <p>
+        Entre sus responsabilidades clave destacan:
+    </p>
+    <ul>
+        <li>Definir la estructura técnica del sistema</li>
+        <li>Asegurar atributos de calidad</li>
+        <li>Seleccionar tecnologías y patrones</li>
+        <li>Guiar equipo de desarrollo</li>
+        <li>Mitigar riesgos técnicos</li>
+    </ul>
+
+    <h2>6. Ejemplos Reales</h2>
+
+    <h3>• Plataforma Finanzas</h3>
+    <p>Uso de microservicios + colas de eventos para transacciones.</p>
+
+    <h3>• Sistema educativo</h3>
+    <p>Arquitectura MVC clásica con capa de servicios REST.</p>
+
+    <h3>• Empresa logística</h3>
+    <p>Arquitectura basada en dominios (DDD) con integración asincrónica.</p>
+
+    <h2>Conclusión Profesional</h2>
+    <div class="highlight">
+        La arquitectura de software no es solo un diagrama:  
+        es una estrategia técnica que define la estabilidad, escalabilidad
+        y evolución del sistema a largo plazo.
+    </div>
+
+    <a href="../index.html" class="footer-link">⬅ Volver al Dashboard</a>
+
+</div>
+
+</body>
+</html>
